@@ -11,4 +11,4 @@ PDF: cv.pdf
 	evince cv.pdf
 
 clean:
-	rm --force *.ps *.dvi *.pdf
+	rm --force *.ps *.dvi *.pdf *.out *.log *.aux
