@@ -9,3 +9,6 @@ cv.pdf: cv.ps
 
 PDF: cv.pdf
 	evince cv.pdf
+
+clean:
+	rm --force *.ps *.dvi *.pdf
