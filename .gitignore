@@ -5,3 +5,4 @@
 *.ps
 *.dvi
 *.aux
+*.synctex.gz
