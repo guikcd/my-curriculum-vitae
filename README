@@ -1,8 +1,0 @@
-Requirements
-------------
-
-```
-$ sudo apt-get install texlive-latex-extra xlive-fonts-recommended
-```
-
-Use `texmaker`to easy generate a PDF :)
