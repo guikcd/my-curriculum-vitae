@@ -1,0 +1,36 @@
+# artifacts expire after 90days, schedule re-generation each month
+# https://help.github.com/en/actions/configuring-and-managing-workflows/persisting-workflow-data-using-artifacts#downloading-or-deleting-artifacts
+name: Schedule build LaTeX document
+on:
+  schedule:
+    - cron:  '0 10 * */1 *'
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v1
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@1.2.1
+        with:
+          root_file: cv.tex
+      - name: Generate artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: my-curriculum-vitae
+          path: cv.pdf
+
+  build_latex_en:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v1
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@1.2.1
+        with:
+          root_file: cv-en.tex
+      - name: Generate artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: my-curriculum-vitae
+          path: cv-en.pdf
