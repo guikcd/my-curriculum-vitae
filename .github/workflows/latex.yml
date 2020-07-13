@@ -1,5 +1,11 @@
 name: Build LaTeX document
-on: [push]
+on:
+  pull_request:
+  push:
+  # artifacts expire after 90days, schedule re-generation each month
+  # https://help.github.com/en/actions/configuring-and-managing-workflows/persisting-workflow-data-using-artifacts#downloading-or-deleting-artifacts
+  schedule:
+    - cron:  '0 10 * */1 *'
 jobs:
   build_latex:
     runs-on: ubuntu-latest
