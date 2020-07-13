@@ -3,7 +3,7 @@
 Show rendered CV
 ----------------
 
-Go to [Actions](https://github.com/guikcd/my-curriculum-vitae/actions?query=is%3Asuccess), last (successfull) build contain zip artifact containing PDFs.
+Go to [Pages](https://guikcd.github.io/my-curriculum-vitae).
 
 Requirements
 ------------
